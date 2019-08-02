@@ -2,7 +2,7 @@
 
 ## サーバ管理者からsshに必要な秘密鍵をもらう
 
-サーバ管理者は、 @r-sakaguchi , @syasin-5d
+サーバ管理者は、 @resedet , @syasin-5d
 
 ## 秘密鍵を `~/.ssh` に配置する。
 
