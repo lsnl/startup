@@ -65,14 +65,14 @@ Enter same passphrase again:
 自分の計算機から fserv に公開鍵を転送する。
 
 ```bash
-rsync ~/.ssh/fserv_rsa.pub  joe@192.168.1.211:995:~/.ssh
+rsync ~/.ssh/fserv_rsa.pub  joe@192.168.1.211:~/.ssh
 ```
 
 fserv にログインし、fserv の `~/.ssh/authorized_keys` に書き込む。
 
 ```bash
 # fserv にログインする。
-ssh -p 995 joe@192.168.1.211
+ssh joe@192.168.1.211
 
 # 転送した公開鍵を `~/.ssh/authorized_keys` に追記する。
 cat ~/.ssh/fserv_rsa.pub >> ~/.ssh/authorized_keys
@@ -83,7 +83,7 @@ cat ~/.ssh/fserv_rsa.pub >> ~/.ssh/authorized_keys
 > 確認せず exit し、ログインできなくなった場合自分のアカウントへ一生入れなくなる可能性があるため。
 
 ```bash
-ssh -p 995 joe@192.168.1.211
+ssh joe@192.168.1.211
 ```
 
 問題なくログインできれば、`exit` で fserv から抜ける。
@@ -91,7 +91,7 @@ ssh -p 995 joe@192.168.1.211
 ### 新しい ssh 鍵で接続を確認する。
 
 ```bash
-ssh -p 995 -i ~/.ssh/fserv_rsa joe@192.168.1.211
+ssh -i ~/.ssh/fserv_rsa joe@192.168.1.211
 ```
 
 ## config ファイルの設定
