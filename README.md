@@ -123,5 +123,5 @@ sudo apt install rxvt-unicode rxvt-unicode-256color
 #### xpywm, xpymon, xpylog をインストールする。
 
 ```bash
-sudo pip3 install xpywm xpymon xpylog
+sudo pip3.7 install xpywm xpymon xpylog
 ```
