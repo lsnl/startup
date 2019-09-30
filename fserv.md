@@ -39,7 +39,7 @@ ssh -p 995 joe@www.lsnl.jp
 ### 新しい ssh 鍵の生成
 
 ```bash
-$ ssh-keygen -b 4096
+$ ssh-keygen -t ed25519
 
 Generationg public/private rsa key pair.
 Enter file in which to save the key (/home/hagi/.ssh/id_rsa):
