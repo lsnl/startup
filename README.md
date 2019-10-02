@@ -36,6 +36,16 @@ Secure Boot を無効化
 
 xpywm を使うために、desktop environment はインストールしない。
 
+### Caps Lock を Ctrl に割り当てる
+
+`/etc/default/keyboard` の `XKBOPTIONS=""` を以下のように変更
+
+```
+XKBOPTIONS="ctrl:nocaps"
+```
+
+再起動する。
+
 ### ネットワークの設定
 
 `/etc/wpa_supplicant/wpa_supplicant.conf` を作成し、ファイルを以下のように編集する。
@@ -72,6 +82,7 @@ iface wlp2s0 inet dhcp
 `ifup wlp2s0` というコマンドでインターフェースが立ち上がる。
 
 ### プロキシの設定
+
 ```bash
 export http_proxy=http://proxy.ksc.kwansei.ac.jp:8080
 export https_proxy=http://proxy.ksc.kwansei.ac.jp:8080
