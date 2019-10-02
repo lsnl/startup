@@ -132,3 +132,51 @@ sudo apt install rxvt-unicode rxvt-unicode-256color
 ```bash
 sudo pip3 install xpywm xpymon xpylog
 ```
+
+### mew 設定
+
+```bash
+emacs ~/.mew.el
+```
+
+## 関学内で使うときの設定
+
+```elisp
+(setq mew-config-alist
+          '(("default"
+             ("proto" . "%")
+             ("name" . "Your Name")
+             ("user" . "fabc12345") % YOUR_NICKNAME
+             ("mail-domain" . "kwansei.ac.jp")
+             ("smtp-server" . "webmail.kwansei.ac.jp")
+             ("smtp-user" . "abc12345")
+             ("imap-server" . "outlook.office365.com")
+             ("imap-user" . "fabc12345@nuc.kwansei.ac.jp")
+             ("imap-ssl" . t)
+             ("imap-port" . "143")
+             ("imap-delete" . "nil")
+             )))
+```
+
+## 関学外で使うときの設定
+
+```elisp
+(setq mew-config-alist
+        '(("default"
+           ("proto" . "%")
+           ("name" . "Your Name")
+           ("user" . "abc12345")
+           ("mail-domain" . "kwansei.ac.jp")
+           ("smtp-user" . "abc12345@nuc.kwansei.ac.jp")
+           ("smtp-server" . "smtp.office365.com")
+           ("smtp-auth" . t)
+           ("smtp-ssl-port" . "587")
+           ("smtp-port" . "587")
+           ("smtp-ssl" . t)
+           ("imap-server" . "outlook.office365.com")
+           ("imap-user" . "abc12345@nuc.kwansei.ac.jp")
+           ("imap-ssl" . t)
+           ("imap-port" . "143")
+           ("imap-delete" . "nil")
+           )))
+```
