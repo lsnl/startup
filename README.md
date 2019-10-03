@@ -44,7 +44,11 @@ xpywm を使うために、desktop environment はインストールしない。
 XKBOPTIONS="ctrl:nocaps"
 ```
 
-再起動する。
+以下のコマンドを実行し、設定を反映させる。
+
+```bash
+/etc/init.d/console-setup.sh restart
+```
 
 ### ネットワークの設定
 
