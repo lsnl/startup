@@ -89,7 +89,7 @@ apt install sudo emacs25
 ユーザ名が hagi のとき、以下のコマンドを実行
 
 ```bash
-useradd hagi sudo
+adduser hagi sudo
 ```
 
 ### xpywm をインストール
