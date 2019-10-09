@@ -86,15 +86,10 @@ apt install sudo emacs25
 
 ### 自分をスーパーユーザにする。
 
+ユーザ名が hagi のとき、以下のコマンドを実行
+
 ```bash
-export EDITOR=/usr/bin/emacs
-visudo
-```
-
-ユーザ名が hagi のとき、以下を追加
-
-```
-hagi    ALL=(ALL:ALL)   ALL
+useradd hagi sudo
 ```
 
 ### xpywm をインストール
