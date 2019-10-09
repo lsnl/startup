@@ -39,7 +39,7 @@ xpywm を使うために、desktop environment はインストールしない。
 ### ネットワークの設定
 
 管理者 (root)で以下のコマンドを実行。
-パスワードの入力する。
+パスワードを入力する。
 
 ```
 wpa_passphrase "lsnl" >> /etc/wpa_supplicant/wpa_supplicant.conf
