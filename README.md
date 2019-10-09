@@ -97,38 +97,33 @@ visudo
 hagi    ALL=(ALL:ALL)   ALL
 ```
 
-### xpywm をインストール
+### xpywm, xpymon, xpylog をインストール
 
-https://github.com/h-ohsaki/xpywm
+xpywm, xpymon, xpylog
+https://pypi.org/project/xpywm/
+https://pypi.org/project/xpymon/
+https://pypi.org/project/xpylog/
 
-#### python3.7 のインストール
+#### pip3 のインストール
 
 ```bash
-sudo apt install build-essential
-sudo apt install libreadline-gplv2-dev libncursesw5-dev libssl-dev \
-    libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev
-cd /usr/src
-sudo wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
-sudo tar xzf Python-3.7.3.tgz
-cd Python-3.7.3
-sudo ./configure --enable-optimizations
-sudo make altinstall
+sudo apt install python3-pip
 ```
 
 #### xpywm, xpymon に必要なパッケージをインストールする。
 
 ```bash
-sudo apt install xorg net-tools
+sudo apt install xserver-xorg xbase-clients rxvt-unicode net-tools
 ```
 
 #### オプショナルだが、ほぼ必須のパッケージをインストールする。
 
 ```bash
-sudo apt install rxvt-unicode rxvt-unicode-256color
+sudo apt install redshift xfonts-terminus firefox-esr
 ```
 
 #### xpywm, xpymon, xpylog をインストールする。
 
 ```bash
-sudo pip3 install xpywm xpymon xpylog
+sudo pip3 install -U xpywm xpymon xpylog
 ```
