@@ -72,6 +72,7 @@ iface wlp2s0 inet dhcp
 `ifup wlp2s0` というコマンドでインターフェースが立ち上がる。
 
 ### プロキシの設定
+
 ```bash
 export http_proxy=http://proxy.ksc.kwansei.ac.jp:8080
 export https_proxy=http://proxy.ksc.kwansei.ac.jp:8080
@@ -122,3 +123,19 @@ sudo apt install redshift xfonts-terminus firefox-esr
 ```bash
 sudo pip3 install -U xpywm xpymon xpylog
 ```
+
+#### sendscreen をインストールする。
+
+```bash
+sudo pip3 install sendscreen
+```
+
+##### moon のアドレスを登録する。
+
+`/etc/hosts` に以下を追加する。
+
+```
+192.168.1.108 moon
+```
+
+アドレスを登録することによって、`sendscreen -s moon` で画面の送信が可能になる。
