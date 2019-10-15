@@ -72,6 +72,7 @@ iface wlp2s0 inet dhcp
 `ifup wlp2s0` というコマンドでインターフェースが立ち上がる。
 
 ### プロキシの設定
+
 ```bash
 export http_proxy=http://proxy.ksc.kwansei.ac.jp:8080
 export https_proxy=http://proxy.ksc.kwansei.ac.jp:8080
@@ -86,51 +87,53 @@ apt install sudo emacs25
 
 ### 自分をスーパーユーザにする。
 
-```bash
-export EDITOR=/usr/bin/emacs
-visudo
-```
-
-ユーザ名が hagi のとき、以下を追加
-
-```
-hagi    ALL=(ALL:ALL)   ALL
-```
-
-### xpywm をインストール
-
-https://github.com/h-ohsaki/xpywm
-
-#### python3.7 のインストール
+ユーザ名が hagi のとき、以下のコマンドを実行
 
 ```bash
-sudo apt install build-essential
-sudo apt install libreadline-gplv2-dev libncursesw5-dev libssl-dev \
-    libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev
-cd /usr/src
-sudo wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
-sudo tar xzf Python-3.7.3.tgz
-cd Python-3.7.3
-sudo ./configure --enable-optimizations
-sudo make altinstall
+adduser hagi sudo
+```
+
+### xpywm, xpymon, xpylog をインストール
+
+xpywm, xpymon, xpylog
+https://pypi.org/project/xpywm/
+https://pypi.org/project/xpymon/
+https://pypi.org/project/xpylog/
+
+#### pip3 のインストール
+
+```bash
+sudo apt install python3-pip
 ```
 
 #### xpywm, xpymon に必要なパッケージをインストールする。
 
 ```bash
-sudo apt install xorg net-tools
+sudo apt install xserver-xorg xbase-clients rxvt-unicode net-tools
 ```
 
 #### オプショナルだが、ほぼ必須のパッケージをインストールする。
 
 ```bash
-sudo apt install rxvt-unicode rxvt-unicode-256color
+sudo apt install redshift xfonts-terminus firefox-esr
 ```
 
 #### xpywm, xpymon, xpylog をインストールする。
 
 ```bash
-sudo pip3 install xpywm xpymon xpylog
+sudo pip3 install -U xpywm xpymon xpylog
+```
+
+#### sendscreen をインストールする。
+
+```bash
+sudo pip3 install sendscreen
+```
+
+##### moon のアドレスを登録する。
+
+`/etc/hosts` に以下を追加する。
+
 ```
 
 ### mew 設定
@@ -180,3 +183,9 @@ emacs ~/.mew.el
            ("imap-delete" . "nil")
            )))
 ```
+
+192.168.1.108 moon
+```
+
+アドレスを登録することによって、`sendscreen -s moon` で画面の送信が可能になる。
+
