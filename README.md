@@ -52,13 +52,11 @@ XKBOPTIONS="ctrl:nocaps"
 
 ### ネットワークの設定
 
-`/etc/wpa_supplicant/wpa_supplicant.conf` を作成し、ファイルを以下のように編集する。
+管理者 (root)で以下のコマンドを実行。
+パスワードを入力する。
 
 ```
-network = {
-    ssid="ここに SSID(Wi-Fi の名前)を書く"
-    psk="ここに Wi-Fi のパスワードを書く"
-}
+wpa_passphrase "lsnl" >> /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 `iwconfig` でインターフェース名を確認する。
