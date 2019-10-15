@@ -36,6 +36,20 @@ Secure Boot を無効化
 
 xpywm を使うために、desktop environment はインストールしない。
 
+### Caps Lock を Ctrl に割り当てる
+
+`/etc/default/keyboard` の `XKBOPTIONS=""` を以下のように変更
+
+```
+XKBOPTIONS="ctrl:nocaps"
+```
+
+以下のコマンドを実行し、設定を反映させる。
+
+```bash
+/etc/init.d/console-setup.sh restart
+```
+
 ### ネットワークの設定
 
 `/etc/wpa_supplicant/wpa_supplicant.conf` を作成し、ファイルを以下のように編集する。
