@@ -135,33 +135,16 @@ sudo pip3 install sendscreen
 `/etc/hosts` に以下を追加する。
 
 ```
+192.168.1.108 moon
+```
+
+アドレスを登録することによって、`sendscreen -s moon` で画面の送信が可能になる。
 
 ### mew 設定
 
 ```bash
 emacs ~/.mew.el
 ```
-
-## 関学内で使うときの設定
-
-```elisp
-(setq mew-config-alist
-          '(("default"
-             ("proto" . "%")
-             ("name" . "Your Name")
-             ("user" . "fabc12345") % YOUR_NICKNAME
-             ("mail-domain" . "kwansei.ac.jp")
-             ("smtp-server" . "webmail.kwansei.ac.jp")
-             ("smtp-user" . "abc12345")
-             ("imap-server" . "outlook.office365.com")
-             ("imap-user" . "fabc12345@nuc.kwansei.ac.jp")
-             ("imap-ssl" . t)
-             ("imap-port" . "143")
-             ("imap-delete" . "nil")
-             )))
-```
-
-## 関学外で使うときの設定
 
 ```elisp
 (setq mew-config-alist
@@ -183,9 +166,3 @@ emacs ~/.mew.el
            ("imap-delete" . "nil")
            )))
 ```
-
-192.168.1.108 moon
-```
-
-アドレスを登録することによって、`sendscreen -s moon` で画面の送信が可能になる。
-
