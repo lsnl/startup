@@ -151,3 +151,30 @@ sudo pip3 install sendscreen
 ```
 
 アドレスを登録することによって、`sendscreen -s moon` で画面の送信が可能になる。
+
+### mew 設定
+
+```bash
+emacs ~/.mew.el
+```
+
+```elisp
+(setq mew-config-alist
+        '(("default"
+           ("proto" . "%")
+           ("name" . "Your Name")
+           ("user" . "abc12345")
+           ("mail-domain" . "kwansei.ac.jp")
+           ("smtp-user" . "abc12345@nuc.kwansei.ac.jp")
+           ("smtp-server" . "smtp.office365.com")
+           ("smtp-auth" . t)
+           ("smtp-ssl-port" . "587")
+           ("smtp-port" . "587")
+           ("smtp-ssl" . t)
+           ("imap-server" . "outlook.office365.com")
+           ("imap-user" . "abc12345@nuc.kwansei.ac.jp")
+           ("imap-ssl" . t)
+           ("imap-port" . "143")
+           ("imap-delete" . "nil")
+           )))
+```
