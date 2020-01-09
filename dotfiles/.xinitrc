@@ -6,7 +6,7 @@ xset r rate 200 40
 
 redshift -l 35:135 &
 xpywm 2>/tmp/xpywm.log &
-xpymon 2>/tmp/xwpymon.log &
+xpymon 2>/tmp/xpymon.log &
 xpylog 2>/tmp/xpylog.log &
 emacs &
 urxvt
