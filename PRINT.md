@@ -63,7 +63,7 @@ stow パッケージをインストールする。/usr/local 以下にシンボ�
 
 ```bash
 sudo apt install stow
-sudo cd /usr/local/stow
+cd /usr/local/stow
 sudo stow -v brother
 ```
 
