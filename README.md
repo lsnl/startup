@@ -188,3 +188,10 @@ emacs ~/.mew.el
            ("imap-delete" . "nil")
            )))
 ```
+
+### skk をインストール
+
+```bash
+sudo apt install ddskk skkdic uim uim-skk dbskkd-cdb skkdic-cdb
+echo "(define default-im-name 'skk)" > ~/.uim
+```
