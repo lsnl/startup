@@ -195,3 +195,10 @@ emacs ~/.mew.el
 sudo apt install ddskk skkdic uim uim-skk dbskkd-cdb skkdic-cdb
 echo "(define default-im-name 'skk)" > ~/.uim
 ```
+
+### fish をインストール
+
+```bash
+sudo apt install fish
+chsh -s /usr/bin/fish
+```
