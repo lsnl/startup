@@ -16,6 +16,12 @@ apt install sudo vim
 sudo apt install i3
 ```
 
+`~/.xinitrc` に以下を追記する。
+
+```bash
+exec i3
+```
+
 #### オプショナルだが、ほぼ必須のパッケージをインストールする。
 
 ```bash
