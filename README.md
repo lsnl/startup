@@ -20,21 +20,21 @@
 
 ## PC のセットアップ
 
-### Debian を入手する。
+### Debian を入手
 
 [Unofficial non-free images including firmware packages](http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/)
 
-### Debian をインストールするためのディスクを作成する。
+### Debian をインストールするためのディスクを作成
 
 `sudo fdisk -l` で、USB がどのような名前で認識されているかを確認する。
 
 `/dev/sdb1` という名前で認識されていた場合を記述する。
 
-#### アンマウントする
+#### アンマウント
 
 `sudo umount /dev/sdb1`
 
-#### フォーマットする
+#### フォーマット
 
 `sudo mkfs.vfat /dev/sdb1`
 
@@ -42,7 +42,7 @@
 
 `sudo dd if=/home/hagi/Downloads/debian.iso of=/dev/sdb1 bs=1048576`
 
-### Debian を PC にインストールする。
+### Debian を PC にインストール
 
 #### BIOS の設定
 
@@ -50,7 +50,7 @@ Secure Boot を無効化
 ブートの方法を Legacy Only
 ブート順の変更(USB を SSD より前にする)
 
-#### Debian desktop environment のチェックを外す．
+#### Debian desktop environment のチェックを外す
 
 xpywm を使うために、desktop environment はインストールしない。
 
@@ -107,7 +107,7 @@ iface wlp2s0 inet dhcp
 apt install sudo emacs25
 ```
 
-### 自分をスーパーユーザにする。
+### 自分をスーパーユーザにする
 
 ユーザ名が hagi のとき、以下のコマンドを実行
 
@@ -128,31 +128,31 @@ https://pypi.org/project/xpylog/
 sudo apt install python3-pip
 ```
 
-#### xpywm, xpymon に必要なパッケージをインストールする。
+#### xpywm, xpymon に必要なパッケージをインストール
 
 ```bash
 sudo apt install xserver-xorg xbase-clients rxvt-unicode net-tools
 ```
 
-#### オプショナルだが、ほぼ必須のパッケージをインストールする。
+#### オプショナルだが、ほぼ必須のパッケージをインストール
 
 ```bash
 sudo apt install redshift xfonts-terminus firefox-esr
 ```
 
-#### xpywm, xpymon, xpylog をインストールする。
+#### xpywm, xpymon, xpylog をインストール
 
 ```bash
 sudo pip3 install -U xpywm xpymon xpylog
 ```
 
-#### sendscreen をインストールする。
+#### sendscreen をインストール
 
 ```bash
 sudo pip3 install sendscreen
 ```
 
-##### moon のアドレスを登録する。
+##### moon のアドレスを登録
 
 `/etc/hosts` に以下を追加する。
 
