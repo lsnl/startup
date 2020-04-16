@@ -26,9 +26,9 @@ sudo umount /mnt/cdrom
 sudo apt install eblook lookup-el
 ```
 
-## `~/.emacs` に設定を書く
+## `~/.emacs.el` に設定を書く
 
-~/emacs.el に以下を加える (例えば、ASCDATES という辞書と FOLDOC という辞書が/home/kei/dict にある時)
+`~/emacs.el` に以下を加える。
 
 ```
 (setq lookup-search-agents
