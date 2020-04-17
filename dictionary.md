@@ -28,8 +28,6 @@ sudo apt install eblook lookup-el
 
 ## `~/.emacs.el` に設定を書く
 
-`~/emacs.el` に以下を加える。
-
 ```
 (setq lookup-search-agents
   '(
