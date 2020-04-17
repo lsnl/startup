@@ -117,10 +117,9 @@ adduser hagi sudo
 
 ### xpywm, xpymon, xpylog をインストール
 
-xpywm, xpymon, xpylog
-https://pypi.org/project/xpywm/
-https://pypi.org/project/xpymon/
-https://pypi.org/project/xpylog/
+- [xpywm](https://pypi.org/project/xpywm/)
+- [xpymon](https://pypi.org/project/xpymon/)
+- [xpylog](https://pypi.org/project/xpylog/)
 
 #### pip3 のインストール
 
