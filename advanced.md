@@ -58,6 +58,66 @@ Mod1+Control+apostrophe で、800 x 600 にウィンドウサイズを設定す�
 
 アドレスを登録することによって、`sendscreen -s moon` で画面の送信が可能になる。
 
+### fetchmail 設定
+
+```bash
+sudo apt install fetchmail
+```
+
+`.fetchmailrc` を編集する。
+
+```
+defaults
+
+poll smtp.office365.com
+protocol IMAP
+uidl
+user "abc12345@nuc.kwansei.ac.jp"
+password "P@assw0rd"
+
+keep
+no mimedecode
+no rewrite
+ssl
+```
+
+### mutt をインストール
+
+```bash
+sudo apt install mutt
+```
+
+`.muttrc` を編集する。
+
+```bash
+set editor = vim
+set charset = "UTF-8"
+
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+set from = "abc12345@kwansei.ac.jp"
+
+set imap_user = "abc12345@nuc.kwansei.ac.jp"
+set imap_pass = "P@assw0rd"
+
+set smtp_url = "smtp://$imap_user@smtp.office365.com:587"
+set smtp_pass = "$imap_pass"
+
+set mail_check=60
+
+bind pager j next-line
+bind pager k previous-line
+bind attach,index,pager \CD next-page
+bind attach,index,pager \CU previous-page
+bind pager g top
+bind pager G bottom
+bind attach,index g first-entry
+bind attach,index G last-entry
+
+bind index i imap-fetch-mail
+```
+
 ### mozc をインストール
 
 ```bash
