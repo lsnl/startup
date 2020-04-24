@@ -131,7 +131,7 @@ sudo apt install python3-pip
 #### xpywm, xpymon に必要なパッケージをインストール
 
 ```bash
-sudo apt install xserver-xorg xbase-clients rxvt-unicode net-tools
+sudo apt install xserver-xorg xbase-clients rxvt-unicode wireless-tools
 ```
 
 #### オプショナルだが、ほぼ必須のパッケージをインストール
