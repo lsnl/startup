@@ -2,14 +2,10 @@
 
 ## 100 tips を読む
 
-* [100 tips for your successful undergraduate/graduate school life/充実した大学・大学院生活のための 100 のヒント](http://www.lsnl.jp/~ohsaki/research/100-tips/)
-
-* [100 tips for your successful laboratory life/充実した研究室生活のための 100 のヒント](http://www.lsnl.jp/~ohsaki/research/100-tips-lab/)
-
+- [100 tips for your successful undergraduate/graduate school life/充実した大学・大学院生活のための 100 のヒント](http://www.lsnl.jp/~ohsaki/research/100-tips/)
+- [100 tips for your successful laboratory life/充実した研究室生活のための 100 のヒント](http://www.lsnl.jp/~ohsaki/research/100-tips-lab/)
 - [100 books for your successful research activities/充実した研究活動のための 100 の書籍](http://www.lsnl.jp/~ohsaki/research/100-books/)
-
 - [10 tools for your successful research activities/充実した研究室生活のための 10 のツール](http://www.lsnl.jp/~ohsaki/research/10-tools/)
-
 - [100 tools for your joyful computer life](http://www.lsnl.jp/~ohsaki/research/100-tools/)
 
 これは、快適かつ有意義な研究生活を過ごすためのヒントです。また、大崎研
@@ -117,10 +113,9 @@ adduser hagi sudo
 
 ### xpywm, xpymon, xpylog をインストール
 
-xpywm, xpymon, xpylog
-https://pypi.org/project/xpywm/
-https://pypi.org/project/xpymon/
-https://pypi.org/project/xpylog/
+- [xpywm](https://pypi.org/project/xpywm/)
+- [xpymon](https://pypi.org/project/xpymon/)
+- [xpylog](https://pypi.org/project/xpylog/)
 
 #### pip3 のインストール
 
