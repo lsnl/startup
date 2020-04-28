@@ -45,18 +45,21 @@ Generationg public/private rsa key pair.
 Enter file in which to save the key (/home/hagi/.ssh/id_rsa):
 # 鍵の名前を決める。
 # 自分がわかりやすい名前にする。
+# そのままでも問題ない。
 /home/hagi/.ssh/fserv_ed25519
 
 Enter passphrase (empty for no passphrase):
 # ssh キーを利用するときのパスフレーズ
-# 毎度パスワードを入力するのには手間がかかるので、何も入力せずに Enter
+# 何も入力しないのは bad practice (やってはいけない)
 
 Enter same passphrase again:
-# もう一度 Enter
+# もう一度入力して Enter
 ```
 
+ssh 時、毎度パスワードを入力するのが面倒な場合、ssh-agent などを用いる。
+
 `~/.ssh/` 以下に、`fserv_ed25519` `fserv_ed25519.pub` が生成される。
-`fserv_ed25519` は、秘密鍵。`fserv_ed25519.pub` は、公開鍵
+`fserv_ed25519` は、秘密鍵。`fserv_ed25519.pub` は、公開鍵。
 
 公開鍵を fserv の `~/.ssh/authorized_keys` に書き込むと、ssh によるログインができる。
 
