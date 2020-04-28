@@ -44,7 +44,6 @@ $ ssh-keygen -t ed25519
 Generationg public/private rsa key pair.
 Enter file in which to save the key (/home/hagi/.ssh/id_ed25519):
 # 鍵の名前を決める。
-# 自分がわかりやすい名前にする。
 # そのままでも問題ない。
 /home/hagi/.ssh/id_ed25519
 
