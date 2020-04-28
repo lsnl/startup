@@ -42,11 +42,11 @@ ssh -p 995 joe@www.lsnl.jp
 $ ssh-keygen -t ed25519
 
 Generationg public/private rsa key pair.
-Enter file in which to save the key (/home/hagi/.ssh/id_rsa):
+Enter file in which to save the key (/home/hagi/.ssh/id_ed25519):
 # 鍵の名前を決める。
 # 自分がわかりやすい名前にする。
 # そのままでも問題ない。
-/home/hagi/.ssh/fserv_ed25519
+/home/hagi/.ssh/id_ed25519
 
 Enter passphrase (empty for no passphrase):
 # ssh キーを利用するときのパスフレーズ
@@ -58,8 +58,8 @@ Enter same passphrase again:
 
 ssh 時、毎度パスワードを入力するのが面倒な場合、ssh-agent などを用いる。
 
-`~/.ssh/` 以下に、`fserv_ed25519` `fserv_ed25519.pub` が生成される。
-`fserv_ed25519` は、秘密鍵。`fserv_ed25519.pub` は、公開鍵。
+`~/.ssh/` 以下に、`id_ed25519` `id_ed25519.pub` が生成される。
+`id_ed25519` は、秘密鍵。`id_ed25519.pub` は、公開鍵。
 
 公開鍵を fserv の `~/.ssh/authorized_keys` に書き込むと、ssh によるログインができる。
 
@@ -68,7 +68,7 @@ ssh 時、毎度パスワードを入力するのが面倒な場合、ssh-agent 
 自分の計算機から fserv に公開鍵を転送する。
 
 ```bash
-rsync ~/.ssh/fserv_ed25519.pub  joe@192.168.1.211:~/.ssh
+rsync ~/.ssh/id_ed25519.pub  joe@192.168.1.211:~/.ssh
 ```
 
 fserv にログインし、fserv の `~/.ssh/authorized_keys` に書き込む。
@@ -78,7 +78,7 @@ fserv にログインし、fserv の `~/.ssh/authorized_keys` に書き込む。
 ssh joe@192.168.1.211
 
 # 転送した公開鍵を `~/.ssh/authorized_keys` に追記する。
-cat ~/.ssh/fserv_ed25519.pub >> ~/.ssh/authorized_keys
+cat ~/.ssh/id_ed25519.pub >> ~/.ssh/authorized_keys
 ```
 
 **新しくターミナルを立ち上げ**、今までの ssh 鍵で通信できるかを確認する。
@@ -94,7 +94,7 @@ ssh joe@192.168.1.211
 ### 新しい ssh 鍵で接続を確認する
 
 ```bash
-ssh -i ~/.ssh/fserv_ed25519 joe@192.168.1.211
+ssh -i ~/.ssh/id_ed25519 joe@192.168.1.211
 ```
 
 ## config ファイルの設定
@@ -109,7 +109,7 @@ Host fserv
     HostName www.lsnl.jp
     port 995
     user joe
-    IdentityFile ~/.ssh/fserv_ed25519
+    IdentityFile ~/.ssh/id_ed25519
     forwardX11 yes
 ```
 
