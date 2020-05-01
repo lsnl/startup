@@ -2,7 +2,7 @@
 
 ## サーバ管理者から ssh に必要な秘密鍵をもらう
 
-サーバ管理者は、 ryota(@resedet ), soma(@syasin-5d )
+サーバ管理者は、 [soma](https://github.com/syasin-5d/) [joe](https://github.com/iPolyomino/)
 
 ## 秘密鍵を `~/.ssh` に配置
 
@@ -11,9 +11,9 @@
 
 通常、パーミッションは以下の通り、
 
-> `.ssh` directory `700 (drwx------)`
-> public key (`.pub` file): `644 (-rw-r--r--)`
-> private key (`id_rsa`): `600 (-rw-------)`
+> - `.ssh` directory `700 (drwx------)`
+> - public key (`.pub` file): `644 (-rw-r--r--)`
+> - private key (`id_rsa`): `600 (-rw-------)`
 
 ## ssh によるログイン（研究室内）
 
