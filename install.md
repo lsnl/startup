@@ -24,7 +24,7 @@
 
 #### 書き込む
 
-`sudo dd if=/home/hagi/Downloads/debian.iso of=/dev/sdb1 bs=1048576`
+`sudo dd if=/path/to/debian.iso of=/dev/sdb1 bs=1048576`
 
 ## Debian を PC にインストール
 
