@@ -107,6 +107,16 @@ sudo pip3 install sendscreen
 
 アドレスを登録することによって、`sendscreen -s moon` で画面の送信が可能になる。
 
+### dotfiles をホームディレクトリにコピー
+
+Git を用いてサーバから取得する。
+
+```bash
+sudo apt install git
+git clone https://github.com/lsnl/startup.git
+cp -r startup/dotfiles/. ~
+```
+
 ### mew 設定
 
 ```bash
