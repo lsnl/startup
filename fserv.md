@@ -27,11 +27,11 @@ ssh joe@192.168.1.211
 
 ## ssh によるログイン（研究室外）
 
-www.lsnl.jp の 995 番ポートが、研究室内にある fserv の 22 番ポートに転送されている。
+gw.lsnl.jp の 995 番ポートが、研究室内にある fserv の 22 番ポートに転送されている。
 そのため、995 番ポートを指定する必要がある。
 
 ```bash
-ssh -p 995 joe@www.lsnl.jp
+ssh -p 995 joe@gw.lsnl.jp
 ```
 
 ## 新しい ssh 鍵で通信を行う
@@ -105,7 +105,7 @@ ssh を行う際に毎度オプションを書いてもいいが、非常に手�
 
 ```bash
 Host fserv
-    HostName www.lsnl.jp
+    HostName gw.lsnl.jp
     port 995
     user joe
     IdentityFile ~/.ssh/id_ed25519
