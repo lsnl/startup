@@ -37,14 +37,14 @@ bash, zsh
 
 ```bash
 export TEXINPUTS="$TEXINPUTS:/path/to/fserv/home/ohsaki/inputs//"
-export BIBINPUTS="$BIBINPUTS:/path/to/fserv/home/ohsaki/bib/"
+export BIBINPUTS="$BIBINPUTS:/path/to/fserv/home/ohsaki/bib//"
 ```
 
 fish
 
 ```fish
 set -x TEXINPUTS .:/path/to/fserv/home/ohsaki/inputs//:/usr/share/texlive/texmf-dist//:/etc/texmf//
-set -x BIBINPUTS .:/path/to/fserv/home/ohsaki/bib/
+set -x BIBINPUTS .:/path/to/fserv/home/ohsaki/bib//
 ```
 
 (※ `/path/to/fserv/ohsaki` は各自適切に設定してください。)
