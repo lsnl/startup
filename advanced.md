@@ -37,7 +37,7 @@ sudo pip3 install sendscreen
 ##### sendscreen するときに、画面がはみ出ないようにする
 
 ```bash
-sudo apt install wmctl xdotool
+sudo apt install wmctrl xdotool
 ```
 
 `.config/i3/config` に追記する。
