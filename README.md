@@ -50,7 +50,7 @@ Host に Debian をインストールした場合、ネットワークの設定�
 ### 必須アプリケーションのインストール
 
 ```bash
-apt install sudo emacs25
+apt install sudo emacs
 ```
 
 ### 自分をスーパーユーザにする
