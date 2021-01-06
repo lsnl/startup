@@ -52,7 +52,7 @@ sudo apt install libc6:i386 libncurses5:i386 libstdc++6:i386
 % 3 つ全て必要か不明
 ref: https://askubuntu.com/questions/454253/how-to-run-32-bit-app-in-ubuntu-64-bit
 
-`fserv:/home/kaz/tmp/brother` をディレクトリごとローカルに落とし、
+`fserv:/pub/.local.jessie/stow/brother` をディレクトリごとローカルに落とし、
 `/usr/local/stow/brother` に置く
 
 % ps2br3 はシェルスクリプトなので中身を見ればファイルの配置場所などは
