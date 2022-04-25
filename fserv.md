@@ -2,7 +2,7 @@
 
 ## サーバ管理者から ssh に必要な秘密鍵をもらう
 
-サーバ管理者は、 [takeaki]https://github.com/takeaki-I
+サーバ管理者は、 [takeaki] https://github.com/takeaki-I
 
 
 ## 秘密鍵を `~/.ssh` に配置
