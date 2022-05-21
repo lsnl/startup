@@ -51,7 +51,7 @@ Host に Debian をインストールした場合、ネットワークの設定�
 adduser xxx sudo
 ```
 
-## startx のインストール
+## startx のインストール +  日本語の入力
 
 ```
 wget -O - lsnl.jp/xpywm | sh
@@ -80,12 +80,4 @@ https://github.com/lsnl/startup/fserver-2022.md
 
 https://github.com/lsnl/startup/cserver-2022.md
 
-## 日本語の入力
-
-skk をインストール
-
-```bash
-sudo apt install ddskk skkdic uim uim-skk dbskkd-cdb skkdic-cdb
-echo "(define default-im-name 'skk)" > ~/.uim
-```
 
