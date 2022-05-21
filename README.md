@@ -41,7 +41,7 @@ XKBOPTIONS="ctrl:nocaps"
 
 ### ネットワークの設定
 
-Host に Debian をインストールした場合、ネットワークの設定を行う必要がある。 → https://github.com/lsnl/startup/blob/master/network.md
+Host に Debian をインストールした場合、ネットワークの設定を行う必要がある。 → https://github.com/lsnl/startup/network-installation-2022.md
 
 ### 必須アプリケーションのインストール
 
