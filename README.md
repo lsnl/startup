@@ -8,11 +8,7 @@
 - [10 tools for your successful research activities/充実した研究室生活のための 10 のツール](http://www.lsnl.jp/~ohsaki/research/10-tools/)
 - [100 tools for your joyful computer life](http://www.lsnl.jp/~ohsaki/research/100-tools/)
 
-これは、快適かつ有意義な研究生活を過ごすためのヒントです。また、大崎研
-究室のルールでもあります。人に質問する方法や論文の書き方、ディレクトリ
-の整理方法など、研究生活を行う上でのヒントがまとめられています。何か困っ
-たときに、すぐに人に聞くのではなく、本当に質問すべき内容か、そうであれ
-ばどのように質問すればよいかなどをこれを活用してください。
+これは、快適かつ有意義な研究生活を過ごすためのヒントです。また、大崎研究室のルールでもあります。人に質問する方法や論文の書き方、ディレクトリの整理方法など、研究生活を行う上でのヒントがまとめられています。何か困ったときに、すぐに人に聞くのではなく、本当に質問すべき内容か、そうであればどのように質問すればよいかなどをこれを活用してください。
 
 ## PC のセットアップ
 
@@ -61,7 +57,6 @@ apt install sudo emacs
 adduser xxx sudo
 ```
 
-
 ### startup のインストール
 
 ```
@@ -70,6 +65,9 @@ tar xzvf home.tgz
 startx
 ```
 
+### fish をインストール
 
-
-
+```bash
+sudo apt install fish
+chsh -s /usr/bin/fish
+```
