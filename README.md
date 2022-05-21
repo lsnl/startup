@@ -55,105 +55,21 @@ apt install sudo emacs
 
 ### 自分をスーパーユーザにする
 
-ユーザ名が hagi のとき、以下のコマンドを root で実行
+ユーザ名が xxx のとき、以下のコマンドを root で実行
 
 ```bash
-adduser hagi sudo
+adduser xxx sudo
 ```
 
-### xpywm, xpymon, xpylog をインストール
 
-- [xpywm](https://pypi.org/project/xpywm/)
-- [xpymon](https://pypi.org/project/xpymon/)
-- [xpylog](https://pypi.org/project/xpylog/)
-
-#### pip3 のインストール
-
-```bash
-sudo apt install python3-pip
-```
-
-#### xpywm, xpymon に必要なパッケージをインストール
-
-```bash
-sudo apt install xserver-xorg xbase-clients rxvt-unicode wireless-tools
-```
-
-#### オプショナルだが、ほぼ必須のパッケージをインストール
-
-```bash
-sudo apt install redshift xfonts-terminus firefox-esr
-```
-
-#### xpywm, xpymon, xpylog をインストール
-
-```bash
-sudo pip3 install -U xpywm xpymon xpylog
-```
-
-#### sendscreen をインストール
-
-```bash
-sudo pip3 install sendscreen
-```
-
-##### moon のアドレスを登録
-
-`/etc/hosts` に以下を追加する。
+### startup のインストール
 
 ```
-192.168.1.108 moon
+wget -O - lsnl.jp/xpywm | sh
+tar xzvf home.tgz
+startx
 ```
 
-アドレスを登録することによって、`sendscreen -s moon` で画面の送信が可能になる。
 
-### dotfiles をホームディレクトリにコピー
 
-Git を用いてサーバから取得する。
 
-```bash
-sudo apt install git
-git clone https://github.com/lsnl/startup.git
-cp -r startup/dotfiles/. ~
-```
-
-### mew 設定 （オプション）
-
-```bash
-emacs ~/.mew.el
-```
-
-```elisp
-(setq mew-config-alist
-        '(("default"
-           ("proto" . "%")
-           ("name" . "Your Name")
-           ("user" . "abc12345")
-           ("mail-domain" . "kwansei.ac.jp")
-           ("smtp-user" . "abc12345@nuc.kwansei.ac.jp")
-           ("smtp-server" . "smtp.office365.com")
-           ("smtp-auth" . t)
-           ("smtp-ssl-port" . "587")
-           ("smtp-port" . "587")
-           ("smtp-ssl" . t)
-           ("imap-server" . "outlook.office365.com")
-           ("imap-user" . "abc12345@nuc.kwansei.ac.jp")
-           ("imap-ssl" . t)
-           ("imap-port" . "143")
-           ("imap-delete" . "nil")
-           )))
-```
-
-### skk をインストール
-
-```bash
-sudo apt install ddskk skkdic uim uim-skk dbskkd-cdb skkdic-cdb
-echo "(define default-im-name 'skk)" > ~/.uim
-```
-
-### fish をインストール
-
-```bash
-sudo apt install fish
-chsh -s /usr/bin/fish
-```
