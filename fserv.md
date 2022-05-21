@@ -20,10 +20,10 @@
 
 fserv の IP アドレスは、192.168.1.211 なのでこの IP アドレスを指定して接続する。
 
-ログインするユーザ名が、 `joe` の場合の例は以下
+ログインするユーザ名が、 `xxx` の場合の例は以下
 
 ```bash
-ssh joe@192.168.1.211
+ssh xxx@192.168.1.211
 ```
 
 ## ssh によるログイン（研究室外）
@@ -32,7 +32,7 @@ rabbit.lsnl.jp の 210 番ポートが、研究室内にある fserv の 22 番�
 そのため、210 番ポートを指定する必要がある。
 
 ```bash
-ssh -p 210 han@rabbit.lsnl.jp
+ssh -p 210 xxx@rabbit.lsnl.jp
 ```
 
 ## 新しい ssh 鍵で通信を行う
@@ -68,14 +68,14 @@ ssh 時、毎度パスワードを入力するのが面倒な場合、ssh-agent 
 自分の計算機から fserv に公開鍵を転送する。
 
 ```bash
-rsync ~/.ssh/id_ed25519.pub  joe@192.168.1.211:~/.ssh
+rsync ~/.ssh/id_ed25519.pub  xxx@192.168.1.211:~/.ssh
 ```
 
 fserv にログインし、fserv の `~/.ssh/authorized_keys` に書き込む。
 
 ```bash
 # fserv にログインする。
-ssh joe@192.168.1.211
+ssh xxx@192.168.1.211
 
 # 転送した公開鍵を `~/.ssh/authorized_keys` に追記する。
 cat ~/.ssh/id_ed25519.pub >> ~/.ssh/authorized_keys
@@ -86,7 +86,7 @@ cat ~/.ssh/id_ed25519.pub >> ~/.ssh/authorized_keys
 > 確認せず exit し、ログインできなくなった場合自分のアカウントへ一生入れなくなる可能性があるため。
 
 ```bash
-ssh joe@192.168.1.211
+ssh xxx@192.168.1.211
 ```
 
 問題なくログインできれば、`exit` で fserv から抜ける。
@@ -111,7 +111,7 @@ Port 22
 Host fserv
 HostName rabbit.lsnl.jp
 Port 210
-User han
+User xxx
 IdentityFile ~/.ssh/id_ed25519
 ```
 場合によっては、 wlan0 の変わりに自分の pc の wifi のインターフェイスの名前に書きかえる必要がある。 wifi のインターフェイス名が以下のコマンドを使ったらわかる。 
