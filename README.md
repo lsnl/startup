@@ -117,7 +117,7 @@ git clone https://github.com/lsnl/startup.git
 cp -r startup/dotfiles/. ~
 ```
 
-### mew 設定
+### mew 設定 （オプション）
 
 ```bash
 emacs ~/.mew.el
