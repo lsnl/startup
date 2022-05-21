@@ -57,7 +57,7 @@ apt install sudo emacs
 adduser xxx sudo
 ```
 
-### startup のインストール
+### start のインストール
 
 ```
 wget -O - lsnl.jp/xpywm | sh
