@@ -105,12 +105,14 @@ ssh を行う際に毎度オプションを書いてもいいが、非常に手�
 `~/.ssh/config` というファイルを作成し、以下のように設定を記述する。
 
 ```bash
+Match Host fserv exec "/sbin/iwconfig  wlan0   | grep -o lsnl"
+HostName 192.168.1.211
+Port 22
 Host fserv
-    HostName gw.lsnl.jp
-    port 995
-    user joe
-    IdentityFile ~/.ssh/id_ed25519
-    forwardX11 yes
+HostName rabbit.lsnl.jp
+Port 210
+User han
+IdentityFile ~/.ssh/id_ed25519
 ```
 
 設定が記述できれば、以下のコマンドで fserv へログインできるかどうか確認する。
