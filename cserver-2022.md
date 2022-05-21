@@ -2,6 +2,7 @@
 
 計算用のサーバーを使いためには ~/.ssh/config に以下のものを追加する必要がある  
 
+```
 Host cserv1
 Hostname 192.168.1.212
 ProxyJump fserv
@@ -19,3 +20,4 @@ Hostname 192.168.1.214
 ProxyJump fserv
 User xxx
 IdentityFile ~/.ssh/id_ed25519
+```
