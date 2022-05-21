@@ -71,3 +71,7 @@ startx
 sudo apt install fish
 chsh -s /usr/bin/fish
 ```
+
+### fsever の設定
+
+ → https://github.com/lsnl/startup/fserver-2022.md
