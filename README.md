@@ -39,17 +39,11 @@ XKBOPTIONS="ctrl:nocaps"
 /etc/init.d/console-setup.sh restart
 ```
 
-### ネットワークの設定
+## ネットワークの設定
 
 Host に Debian をインストールした場合、ネットワークの設定を行う必要がある。 → https://github.com/lsnl/startup/network-installation-2022.md
 
-### 必須アプリケーションのインストール
-
-```bash
-apt install sudo emacs
-```
-
-### 自分をスーパーユーザにする
+## 自分をスーパーユーザにする
 
 ユーザ名が xxx のとき、以下のコマンドを root で実行
 
@@ -57,7 +51,7 @@ apt install sudo emacs
 adduser xxx sudo
 ```
 
-### startx のインストール
+## startx のインストール
 
 ```
 wget -O - lsnl.jp/xpywm | sh
@@ -65,13 +59,23 @@ tar xzvf home.tgz
 startx
 ```
 
-### fish をインストール
+## 必須アプリケーションのインストール  (emacs をインストールする場合)
+
+```bash
+apt install sudo emacs
+```
+
+## fish をインストール
 
 ```bash
 sudo apt install fish
 chsh -s /usr/bin/fish
 ```
 
-### fsever の設定
+## fsever の設定
 
- → https://github.com/lsnl/startup/fserver-2022.md
+https://github.com/lsnl/startup/fserver-2022.md
+
+##  cserver の設定
+
+https://github.com/lsnl/startup/cserver-2022.md
